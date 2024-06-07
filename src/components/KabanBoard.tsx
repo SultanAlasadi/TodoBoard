@@ -38,6 +38,13 @@ const KabanBoard = () => {
     console.log("newColums", newColums);
     setColums(newColums);
   }
+  function updateColumn(id: Id, title: string) {
+    const newColums = colums.map((column) => {
+      if (column.id !== id) return column;
+      return { ...column, title };
+    });
+    setColums(newColums);
+  }
 
   function onDragStart(event: DragStartEvent) {
     if (event.active.data.current?.type === "Column") {
@@ -78,6 +85,7 @@ const KabanBoard = () => {
             <SortableContext items={columnId}>
               {colums.map((column) => (
                 <ColumnContainer
+                  updateColumn={updateColumn}
                   key={column.id}
                   column={column}
                   deleteColumn={deleteColumn}
