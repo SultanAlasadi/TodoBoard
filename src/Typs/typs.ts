@@ -4,3 +4,8 @@ export type Column = {
   title: string;
   // tasks: Task[];
 };
+export type Task = {
+  id: Id;
+  columnId: Id;
+  content: string;
+};
