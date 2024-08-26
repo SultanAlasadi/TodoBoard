@@ -1,4 +1,4 @@
-Todobored
+#Todobored
 Todobored is a task management and note-taking application designed to help you organize your to-dos effortlessly. With drag-and-drop functionality, you can easily move tasks between columns to manage your workflow.
 
 Features
